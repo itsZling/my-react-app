@@ -1,4 +1,3 @@
-import Header from "./Header.jsx"
 import Footer from "./Footer.jsx";
 import Card from "./Card.jsx";
 import Button from "./Buttton.jsx";
@@ -13,11 +12,10 @@ function App() {
     <>
       <Card name='Apothecary' pfp={pfp}/>
       <Card name='Apothecary' pfp={thanks}/>
-      <Header/>
+      <NavBar/>
       <Students name='Spongbob' age={30} isStudent={true}/>
       <Button/>
       <Footer/>
-      <NavBar/>
     </>
   );
 }

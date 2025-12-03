@@ -4,11 +4,6 @@
   --angle: 0deg;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 
 .cs-gradient {
   background-image: linear-gradient(220deg, #22c, #627);
@@ -16,11 +11,25 @@
   -webkit-text-fill-color: transparent;
 }
 
-.nav-group, h3{
+
+.nav-group {
   list-style-type: none;
+  font-size: 24px;
+  padding-left: 0px;
 }
 
-.card {
+.nav-group > li > a {
+  text-decoration: none;
+  color: #FFAACC;
+}
+.nav-group > li > svg {
+  fill: #FFAACC;
+  margin-right: 5px;
+}
+
+.card-button-active {
+  background: linear-gradient(var(--angle), #22c, #627);
+  animation: rotateGradient 2s linear infinite;
   border: 1px solid #2e2e2e;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #727272;
@@ -31,34 +40,77 @@
   display: inline-block;
 }
 
+.card-button-inactive {
+  background: linear-gradient(var(--angle), #9ED, #FAC);
+  animation: rotateGradient 2s linear infinite;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #727272;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+
+
+
 .card .card-image {
   max-width: 60%;
   height: auto;
   margin-bottom: 10px;
 }
 
-.card .card-title {
+.card .card-title-active {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0px;
-  color: #383838;
+  color: #cfcfcf;
 }
 
-.card .card-description {
+.card .card-description-active {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: #404040;
+  color: #cfcfcf;
+}
+
+.card .card-title-inactive {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0px;
+  color: #1d1c1c;
+}
+
+.card .card-description-inactive {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #1d1c1c;
 }
 
 
 
-.button {
+.button-on {
   background: linear-gradient(var(--angle), #22c, #627);
-  animation: rotateGradient 5s linear infinite;
+  animation: rotateGradient 2s linear infinite;
   color: #fefefe;
-  font-weight: 150;
+  font-weight: 700;
   padding: 10px 20px;
   border-radius: 15px;
   border: none;
   cursor: pointer;
+}
+
+.button-off {
+  background: linear-gradient(var(--angle), #9ED, #FAC);
+  animation: rotateGradient 2s linear infinite;
+  color: #101010;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 @keyframes rotateGradient {
