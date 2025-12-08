@@ -23,3 +23,4 @@ To quickly update
 1.) new terminal (CTRL + SHIFT + `)
 2.) git commit -a
 3.) add comment and close file
+4.) git push
