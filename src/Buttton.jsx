@@ -10,7 +10,7 @@ function Button() {
 
     return(
         <div>
-            <button onClick={toggleActive} className={`my-element ${isActive ? 'button-on' : 'button-off'}`}>Mode</button>
+            <button onClick={toggleActive} className={isActive ? 'button-on' : 'button-off'}>Mode</button>
         </div>
     );
 }

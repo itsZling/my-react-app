@@ -8,11 +8,11 @@ function Card(props) {
         };
 
     return(
-        <button onClick={toggleActive} className={`my-element ${isActive ? 'card-button-active' : 'card-button-inactive'}`}>
+        <button onClick={toggleActive} className={isActive ? 'card-button-active' : 'card-button-inactive'}>
             <div className="card">
                 <img className='card-image' src={props.pfp} alt="profile picture" />
-                <h2 className={`my-element ${isActive ? 'card-title-active' : 'card-title-inactive'}`}>{props.name}</h2>
-                <p className={`my-element ${isActive ? 'card-description-active' : 'card-description-inactive'}`}>2nd year CS Major @ the Georgia Institue of technology.</p>
+                <h2 className={isActive ? 'card-title-active' : 'card-title-inactive'}>{props.name}</h2>
+                <p className={isActive ? 'card-description-active' : 'card-description-inactive'}>2nd year CS Major @ the Georgia Institue of technology.</p>
             </div>
         </button>
     );
